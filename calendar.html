@@ -1,11 +1,11 @@
-
 <!DOCTYPE html>
 <html>
-<title>calendar</title>
+<title>W3.CSS</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="html5reset.css" media="screen" title="no title" charset="utf-8">
-<link rel="stylesheet" type="text/css" href="cal.css"/>
 <link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+<link rel="stylesheet" href="mystyle.css">
+<link rel="stylesheet" href="cal.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
 <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
 <style>
@@ -14,273 +14,296 @@ body, html {
     height: 100%;
     color: #777;
     line-height: 1.8;
-    background-color: black;
+}
+
+
+/* Create a Parallax Effect */
+.bgimg-1, .bgimg-2, .bgimg-3 {
+    opacity: 1;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* First image (Logo. Full height) */
+.bgimg-1 {
+    background-image: url('bg_image_1280.png');
+    min-height: 100%;
+}
+
+/* Second image (Portfolio) */
+.bgimg-2 {
+    background-image: url("img_parallax2.jpg");
+    min-height: 400px;
+}
+
+/* Third image (Contact) */
+.bgimg-3 {
+    background-image: url("img_parallax3.jpg");
+    min-height: 400px;
+}
+
+.w3-wide {letter-spacing: 10px;}
+.w3-hover-opacity {cursor: pointer;}
+
+#googleMap {
+    width: 100%;
+    height: 400px;
+    -webkit-filter: grayscale(90%);
+    filter: grayscale(90%);
+}
+
+/* Turn off parallax scrolling for tablets and mobiles */
+@media only screen and (max-width: 1024px) {
+    .bgimg-1, .bgimg-2, .bgimg-3 {
+        background-attachment: scroll;
+    }
 }
 </style>
-<body>
+<body >
 
 <!-- Navbar (sit on top) -->
-<div class="w3-top">
-  <ul class="w3-navbar w3-black w3-text-white" id="myNavbar">
-    <li><a href="#" class="w3-padding-large">HOME</a></li>
-    <li class="w3-hide-small w3-right">
-      <a href="#" class="w3-padding-large w3-hover-red"><i class="fa fa-search"></i></a>
-    </li>
-  </ul>
+<div class="w3-top" >
+  <ul class="w3-navbar   w3-center w3-top w3-xlarge" style="background-color:#2B1801">
+  <li class="w3-left w3-left-align" style="width:50% !important"><a href="#"><i class="fa fa-home"></i></a></li>
+  <li class="w3-left w3-right-align" style="width:50% !important"><a href="#"><i class="fa fa-calendar"></i></a></li>
+
+</ul>
 </div>
 
 <!-- First Parallax Image with Logo Text -->
+<div class="bgimg-1 w3-opacity w3-display-container" style="width:90%; margin-left:5%; border-">
   <div id="calendar-wrap">
-              <header>
-                  <h1>September 2016</h1>
-              </header>
-              <div id="calendar">
-                  <ul class="weekdays">
-                      <li>Monday</li>
-                      <li>Tuesday</li>
-                      <li>Wednesday</li>
-                      <li>Thursday</li>
-                      <li>Friday</li>
-                      <li>Saturday</li>
-                      <li>Sunday</li>
-                  </ul>
+            <header>
+                <h1>September 2016</h1>
+            </header>
+            <div id="calendar">
+                <ul class="weekdays">
+                    <li>Monday</li>
+                    <li>Tuesday</li>
+                    <li>Wednesday</li>
+                    <li>Thursday</li>
+                    <li>Friday</li>
+                    <li>Saturday</li>
+                    <li>Sunday</li>
+                </ul>
 
-                  <!-- Days from previous month -->
+                <!-- Days from previous month -->
 
-                  <ul class="days">
-                      <li class="day other-month">
-                          <div class="date">27</div>
-                      </li>
-                      <li class="day other-month">
-                          <div class="date">28</div>
-                          <div class="event">
-                              <div class="event-desc">
-                                  Pancakes with strawberries
-                              </div>
-                              <div class="event-time">
-                                  30 minutes cooking time
-                              </div>
-                          </div>
-                      </li>
-                      <li class="day other-month">
-                          <div class="date">29</div>
-                      </li>
-                      <li class="day other-month">
-                          <div class="date">30</div>
-                      </li>
-                      <li class="day other-month">
-                          <div class="date">31</div>
-                      </li>
+                <ul class="days">
+                    <li class="day other-month">
+                        <div class="date">27</div>
+                    </li>
+                    <li class="day other-month">
+                        <div class="date">28</div>
+                        <div class="event">
+                            <img style="width:100%" src="pancakes.jpg" alt="Pankcakes" />
+                        </div>
+                    </li>
+                    <li class="day other-month">
+                        <div class="date">29</div>
+                    </li>
+                    <li class="day other-month">
+                        <div class="date">30</div>
+                    </li>
+                    <li class="day other-month">
+                        <div class="date">31</div>
+                    </li>
 
-                      <!-- Days in current month -->
+                    <!-- Days in current month -->
 
-                      <li class="day">
-                          <div class="date">1</div>
-                      </li>
-                      <li class="day">
-                          <div class="date">2</div>
-                          <div class="event">
-                              <div class="event-desc">
-                                  Meatballs with sauce
-                              </div>
-                              <div class="event-time">
-                                  30 minutes cooking time
-                              </div>
-                          </div>
-                      </li>
-                  </ul>
+                    <li class="day">
+                        <div class="date">1</div>
+                    </li>
+                    <li class="day">
+                        <div class="date">2</div>
+                    </li>
+                </ul>
 
-                      <!-- Row #2 -->
+                    <!-- Row #2 -->
 
-                  <ul class="days">
-                      <li class="day">
-                          <div class="date">3</div>
-                      </li>
-                      <li class="day">
-                          <div class="date">4</div>
-                      </li>
-                      <li class="day">
-                          <div class="date">5</div>
-                      </li>
-                      <li class="day">
-                          <div class="date">6</div>
-                      </li>
-                      <li class="day">
-                          <div class="date">7</div>
-                          <div class="event">
-                              <div class="event-desc">
-                                  Group Project meetup
-                              </div>
-                              <div class="event-time">
-                                  6:00pm to 8:30pm
-                              </div>
-                          </div>
-                      </li>
-                      <li class="day">
-                          <div class="date">8</div>
-                      </li>
-                      <li class="day">
-                          <div class="date">9</div>
-                      </li>
-                  </ul>
+                <ul class="days">
+                    <li class="day">
+                        <div class="date">3</div>
+                    </li>
+                    <li class="day">
+                        <div class="date">4</div>
+                    </li>
+                    <li class="day">
+                        <div class="date">5</div>
+                    </li>
+                    <li class="day">
+                        <div class="date">6</div>
+                    </li>
+                    <li class="day">
+                        <div class="date">7</div>
+                        <div class="event">
+                            <img style="width:100%" src="meatballs.jpg" alt="Meaballs" />
+                        </div>
+                    </li>
+                    <li class="day">
+                        <div class="date">8</div>
+                    </li>
+                    <li class="day">
+                        <div class="date">9</div>
+                    </li>
+                </ul>
 
-                      <!-- Row #3 -->
+                    <!-- Row #3 -->
 
-                  <ul class="days">
-                      <li class="day">
-                          <div class="date">10</div>
-                      </li>
-                      <li class="day">
-                          <div class="date">11</div>
-                      </li>
-                      <li class="day">
-                          <div class="date">12</div>
-                      </li>
-                      <li class="day">
-                          <div class="date">13</div>
-                      </li>
-                      <li class="day">
-                          <div class="date">14</div><div class="event">
-                              <div class="event-desc">
-                                  Board Meeting
-                              </div>
-                              <div class="event-time">
-                                  1:00pm to 3:00pm
-                              </div>
-                          </div>
-                      </li>
-                      <li class="day">
-                          <div class="date">15</div>
-                      </li>
-                      <li class="day">
-                          <div class="date">16</div>
-                      </li>
-                  </ul>
+                <ul class="days">
+                    <li class="day">
+                        <div class="date">10</div>
+                    </li>
+                    <li class="day">
+                        <div class="date">11</div>
+                    </li>
+                    <li class="day">
+                        <div class="date">12</div>
+                    </li>
+                    <li class="day">
+                        <div class="date">13</div>
+                    </li>
+                    <li class="day">
+                        <div class="date">14</div><div class="event">
+                            <div class="event-desc">
+                                Board Meeting
+                            </div>
+                            <div class="event-time">
+                                1:00pm to 3:00pm
+                            </div>
+                        </div>
+                    </li>
+                    <li class="day">
+                        <div class="date">15</div>
+                    </li>
+                    <li class="day">
+                        <div class="date">16</div>
+                    </li>
+                </ul>
 
-                      <!-- Row #4 -->
+                    <!-- Row #4 -->
 
-                  <ul class="days">
-                      <li class="day">
-                          <div class="date">17</div>
-                      </li>
-                      <li class="day">
-                          <div class="date">18</div>
-                      </li>
-                      <li class="day">
-                          <div class="date">19</div>
-                      </li>
-                      <li class="day">
-                          <div class="date">20</div>
-                      </li>
-                      <li class="day">
-                          <div class="date">21</div>
-                      </li>
-                      <li class="day">
-                          <div class="date">22</div>
-                          <div class="event">
-                              <div class="event-desc">
-                                  Conference call
-                              </div>
-                              <div class="event-time">
-                                  9:00am to 12:00pm
-                              </div>
-                          </div>
-                      </li>
-                      <li class="day">
-                          <div class="date">23</div>
-                      </li>
-                  </ul>
+                <ul class="days">
+                    <li class="day">
+                        <div class="date">17</div>
+                    </li>
+                    <li class="day">
+                        <div class="date">18</div>
+                    </li>
+                    <li class="day">
+                        <div class="date">19</div>
+                    </li>
+                    <li class="day">
+                        <div class="date">20</div>
+                    </li>
+                    <li class="day">
+                        <div class="date">21</div>
+                    </li>
+                    <li class="day">
+                        <div class="date">22</div>
+                        <div class="event">
+                            <div class="event-desc">
+                                Conference call
+                            </div>
+                            <div class="event-time">
+                                9:00am to 12:00pm
+                            </div>
+                        </div>
+                    </li>
+                    <li class="day">
+                        <div class="date">23</div>
+                    </li>
+                </ul>
 
-                          <!-- Row #5 -->
+                        <!-- Row #5 -->
 
-                  <ul class="days">
-                      <li class="day">
-                          <div class="date">24</div>
-                      </li>
-                      <li class="day">
-                          <div class="date">25</div>
-                          <div class="event">
-                              <div class="event-desc">
-                                  Conference Call
-                              </div>
-                              <div class="event-time">
-                                  1:00pm to 3:00pm
-                              </div>
-                          </div>
-                      </li>
-                      <li class="day">
-                          <div class="date">26</div>
-                      </li>
-                      <li class="day">
-                          <div class="date">27</div>
-                      </li>
-                      <li class="day">
-                          <div class="date">28</div>
-                      </li>
-                      <li class="day">
-                          <div class="date">29</div>
-                      </li>
-                      <li class="day">
-                          <div class="date">30</div>
-                      </li>
-                  </ul>
+                <ul class="days">
+                    <li class="day">
+                        <div class="date">24</div>
+                    </li>
+                    <li class="day">
+                        <div class="date">25</div>
+                        <div class="event">
+                            <div class="event-desc">
+                                Conference Call
+                            </div>
+                            <div class="event-time">
+                                1:00pm to 3:00pm
+                            </div>
+                        </div>
+                    </li>
+                    <li class="day">
+                        <div class="date">26</div>
+                    </li>
+                    <li class="day">
+                        <div class="date">27</div>
+                    </li>
+                    <li class="day">
+                        <div class="date">28</div>
+                    </li>
+                    <li class="day">
+                        <div class="date">29</div>
+                    </li>
+                    <li class="day">
+                        <div class="date">30</div>
+                    </li>
+                </ul>
 
-                  <!-- Row #6 -->
+                <!-- Row #6 -->
 
-                  <ul class="days">
-                      <li class="day">
-                          <div class="date">31</div>
-                      </li>
-                      <li class="day other-month">
-                          <div class="date">1</div> <!-- Next Month -->
-                      </li>
-                      <li class="day other-month">
-                          <div class="date">2</div>
-                      </li>
-                      <li class="day other-month">
-                          <div class="date">3</div>
-                      </li>
-                      <li class="day other-month">
-                          <div class="date">4</div>
-                      </li>
-                      <li class="day other-month">
-                          <div class="date">5</div>
-                      </li>
-                      <li class="day other-month">
-                          <div class="date">6</div>
-                      </li>
-                  </ul>
+                <ul class="days">
+                    <li class="day">
+                        <div class="date">31</div>
+                    </li>
+                    <li class="day other-month">
+                        <div class="date">1</div> <!-- Next Month -->
+                    </li>
+                    <li class="day other-month">
+                        <div class="date">2</div>
+                    </li>
+                    <li class="day other-month">
+                        <div class="date">3</div>
+                    </li>
+                    <li class="day other-month">
+                        <div class="date">4</div>
+                    </li>
+                    <li class="day other-month">
+                        <div class="date">5</div>
+                    </li>
+                    <li class="day other-month">
+                        <div class="date">6</div>
+                    </li>
+                </ul>
 
-              </div><!-- /. calendar -->
-          </div><!-- /. wrap -->
-
-
-<!-- Container (About Section) -->
-<div class="w3-content w3-container w3-padding-64 w3-text-white" id="about">
-  <h3 class="w3-center">ABOUT ME</h3>
-  <p class="w3-center"><em>I love photography</em></p>
-  <p>We have created a fictional "personal" website/blog, and our fictional character is a hobby photographer. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa
-    qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-  <div class="w3-row">
-    <div class="w3-col m6 w3-center w3-section">
-      <p><b>My Name</b></p><br>
-      <img src="https://unsplash.it/235/235?image=91" class="w3-circle" alt="Photo of Me">
-    </div>
-
-    <!-- Hide this text on small devices -->
-    <div class="w3-col m6 w3-hide-small w3-section w3-text-white">
-      <p>Welcome to my website. I am lorem ipsum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
-        dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor
-        incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-    </div>
-  </div>
+            </div><!-- /. calendar -->
+        </div><!-- /. wrap -->
 </div>
 
-<!-- Footer -->
-<footer class="w3-center w3-dark-grey w3-padding-48 w3-hover-black">
-  <p>Powered by <a href="http://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-opacity">w3.css</a></p>
-</footer>
+
+
+<!-- Container (Recipe Section) -->
+<div class="big-container">
+  <div class="w3-content w3-container w3-padding-64 ">
+    <h3 class="w3-center" style="text-align:left!important;">POPULAR RECIPIES</h3>
+
+    <!-- Responsive Grid. Four columns on tablets, laptops and desktops. Will stack on mobile devices/small screens (100% width) -->
+    <div class="w3-row-padding w3-center">
+      <div class="w3-col m3">
+        <img src="meatballs.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity">
+      </div>
+
+      <div class="w3-col m3">
+        <img src="pancakes.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity">
+      </div>
+
+
+
+
+  </div>
+</div>
+</div>
 
 </body>
 </html>
