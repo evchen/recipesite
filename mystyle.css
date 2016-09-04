@@ -1,11 +1,17 @@
 .big-container{
   width:100%;
+  background-color: #2B1801;
+  color: white;
 }
 
 .bg_brown{
   background-color: #2B1801;
+  color: white;
 }
 
 .text_brown{
   color:#2B1801;
 }
+
+.my-navbar{list-style-type:none;margin:0;padding:0;overflow:hidden}
+.my-navbar li{float:left}.my-navbar li a,.w3-navitem{display:block;padding:8px 16px}.my-navbar
