@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html>
+<title>W3.CSS</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="html5reset.css" media="screen" title="no title" charset="utf-8">
+<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+<link rel="stylesheet" href="mystyle.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+<style>
+body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif;}
+body, html {
+    height: 100%;
+    color: #777;
+    line-height: 1.8;
+}
+
+
+/* Create a Parallax Effect */
+.bgimg-1, .bgimg-2, .bgimg-3 {
+    opacity: 1;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* First image (Logo. Full height) */
+.bgimg-1 {
+    background-image: url('bg_image_1280.png');
+    min-height: 100%;
+}
+
+.w3-wide {letter-spacing: 10px;}
+.w3-hover-opacity {cursor: pointer;}
+
+
+p.nutri_text{
+  margin-bottom:1%!important;
+  border-style:none none solid none!important;
+  border-width: 2px!important;
+}
+</style>
+
+<body>
+
+<!-- Navbar (sit on top) -->
+<div class="w3-top" >
+  <ul class="my-navbar w3-center w3-top w3-xlarge bg_brown" >
+  <li class="w3-left w3-left-align" style="width:50% !important"><a href="#"><i class="fa fa-home"></i></a></li>
+  <li class="w3-left w3-right-align" style="width:50% !important"><a href="calendar.html"><i class="fa fa-calendar"></i></a></li>
+
+</ul>
+</div>
+
+<div class="recipe-container text_brown" style="margin-top:80px">
+  <!-- small and medium image displayer-->
+  <div class="w3-col m12 w3-hide-large" style="margin-bottom:20px;">
+    <h2 class="text_brown w3-hide-large" style="text-align:center ">Meatballs</h1>
+    <img src="meatballs.jpg" class="image_resize " alt="meatballs image">
+
+  </div>
+  <!-- large image displayer -->
+  <div class="w3-col m12 w3-hide-medium w3-hide-small recipe-head-container" >
+    <div class="image_container" style="background-image:url('meatballs.jpg');">
+      <h2 style="color:white; margin-top:10%">Swedish</br>Meatballs</h2>
+    </div>
+
+  </div>
+
+
+  <!-- ingredients -->
+  <div class="w3-col m8" style="padding-left:2%; ">
+    <h3>Ingredients</h3>
+    <ul>
+      <li>1/2 cup milk (whole, 2%, or skim</li>
+      <li>1/2 cup fine breadcrumbs</li>
+      <li>1 large egg</li>
+      <li>1 teaspoon salt</li>
+      <li>Freshly ground black pepper</li>
+      <li>1/2 cup grated Parmesan cheese</li>
+      <li>1/4 cup finely minced Italian parsley</li>
+      <li>1 pound ground meat such as beef, pork, turkey, chicken, or veal, or a mix</li>
+      <li>1/2 cup finely chopped onion (or grated on a coarse grater) from 1 small yellow onion</li>
+      <li>1 clove garlic, finely minced</li>
+    </ul>
+
+  </div>
+
+
+
+
+  <!-- Nutrition value -->
+  <div class="w3-col m4 nutri_container " style="margin-top:2%;padding-left:1%;padding-right:1%">
+    <h4 style="margin-bottom:0!important;"><b>Nutrition Facts</b></h4>
+    <p class="nutri_text">
+      <i>4 servings</i>
+    </p>
+    <table style="width:100%">
+      <tr>
+        <td style="text-align:left">Calories</td>
+        <td style="text-align:right">399kCals</td>
+      </tr>
+      <tr>
+        <td style="text-align:left">Carbohydrate</td>
+        <td style="text-align:right">20g</td>
+      </tr>
+      <tr>
+        <td style="text-align:left">Fat</td>
+        <td style="text-align:right">23g</td>
+      </tr>
+      <tr>
+        <td style="text-align:left">Protein</td>
+        <td style="text-align:right">27g</td>
+      </tr>
+      <tr>
+        <td style="text-align:left">Cholesterol</td>
+        <td style="text-align:right">164mg</td>
+      </tr>
+      <tr>
+        <td style="text-align:left">Sodium</td>
+        <td style="text-align:right">2,400mg</td>
+      </tr>
+      <tr>
+        <td style="text-align:left">Fiber</td>
+        <td style="text-align:right">1g</td>
+      </tr>
+    </table>
+
+  <!-- Instruction -->
+  </div>
+  <div class="w3-col m12" style="padding-left:2%; margin-bottom:20px">
+    <h3>Instructions</h3>
+    <ul>
+      <li>Combine the milk and breadcrumbs: Pour the milk over the breadcrumbs in a small bowl and set aside while preparing the rest of the meatball mix. The breadcrumbs will absorb the milk and become soggy.
+      </li>
+      <li>Whisk the egg, salt, pepper, Parmesan, and parsley: Whisk the egg in a large bowl until blended. Whisk in the salt and a generous quantity of black pepper, then whisk in the Parmesan and parsley.
+      </li>
+      <li>Combine the egg and ground meat: Add the meat to the egg mixture. Use your hands to thoroughly mix the egg into the ground meat.
+      </li>
+      <li>Add the onions and soaked breadcrumbs: Add the onions, garlic, and soaked breadcrumbs to the meat. Mix them thoroughly into the meat with your fingers. Try not to overwork the meat; pinch the meat between your fingers rather than kneading it.
+      </li>
+      <li>
+        Form the meat into meat balls: Pinch off a piece of the meat mixture and gently roll between your hands to form 1 1/2-inch meatballs. Continue shaping until all the meat is used.
+      </li>
+      <li>
+        To roast the meatballs in the oven: Arrange the meatballs spaced slightly apart on a baking sheet. Cook under the broiler for 20 to 25 minutes or bake at 400 &#8457; for 25 to 30 minutes. (Watch closely if cooking meatballs made with lean meat.) The meatballs are done when cooked through and the outsides are browned, and when they register 165 &#8457; in the middle on an instant read thermometer. Serve immediately.
+      </li>
+      <li>
+        To cook the meatballs in sauce: Bring a marinara sauce or other pasta sauce to a simmer and add as many meatballs as will fit comfortably in the pan. Cover and simmer for 30 to 35 minutes. The meatballs are done when they're cooked through and register 165 &#8457; in the middle on an instant read thermometer. Serve immediately.
+      </li>
+    </ul>
+
+  </div>
+  <!-- Line -->
+  <div class="w3-col m12" >
+    <hr>
+  </div>
+
+  <!-- Write Comment -->
+  <div class="w3-col m12" style="margin-top:20px; margin-bottom:20px">
+      <div class="w3-container w3-padding">
+        <h6 class="w3-opacity">Comment</h6>
+        <p contenteditable="true" class="w3-border w3-padding">tastes great</p>
+        <button type="button" class="w3-btn w3-theme w3-right" style="margin-top:10px"><i class="fa fa-pencil"></i> Post</button>
+      </div>
+      <hr>
+  </div>
+
+  <!-- Comments -->
+  <div class="w3-container" style=" margin-bottom:20px">
+    <h5>Recent Comments</h5>
+    <div class="w3-row">
+      <div class="w3-col m2 text-center">
+        <img class="w3-circle" src="img_avatar3.png" style="width:96px;height:96px">
+      </div>
+      <div class="w3-col m10 w3-container">
+        <h4>John <span class="w3-opacity w3-medium">Sep 29, 2014, 9:12 PM</span></h4>
+        <p>Keep up the GREAT work! I am cheering for you!! Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p><br>
+      </div>
+    </div>
+    <hr>
+    <div class="w3-row">
+      <div class="w3-col m2 text-center">
+        <img class="w3-circle" src="img_avatar1.png" style="width:96px;height:96px">
+      </div>
+      <div class="w3-col m10 w3-container">
+        <h4>Bo <span class="w3-opacity w3-medium">Sep 28, 2014, 10:15 PM</span></h4>
+        <p>Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p><br>
+      </div>
+    </div>
+  </div>
+
+  <!-- Line -->
+  <div class="w3-col m12" style=" margin-bottom:30px" >
+    <hr>
+  </div>
+
+</div>
+
+
+
+<!-- Container -->
+<div class="big-container">
+  <div class="w3-content w3-container w3-padding-64 ">
+    <h3 class="w3-center" style="text-align:left!important;">POPULAR RECIPIES</h3>
+
+    <!-- Responsive Grid. Four columns on tablets, laptops and desktops. Will stack on mobile devices/small screens (100% width) -->
+    <div class="w3-row-padding w3-center">
+      <div class="w3-col m3">
+        <img src="meatballs.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity">
+      </div>
+
+      <div class="w3-col m3">
+        <img src="pancakes.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity">
+      </div>
+
+
+
+
+  </div>
+</div>
+
+</body>
+</html>
