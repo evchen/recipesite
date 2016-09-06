@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 <html>
-<title>W3.CSS</title>
+<title>Recipe Calendar</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="html5reset.css" media="screen" title="no title" charset="utf-8">
 <link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
 <link rel="stylesheet" href="mystyle.css">
 <link rel="stylesheet" href="cal.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato|Raleway|Indie+Flower">
 <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
 <style>
-body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif;}
+body,h1,h2,h3,h4,h5,h6 {font-family: 'Raleway', sans-serif!important}
 body, html {
     height: 100%;
     color: #777;
@@ -66,9 +66,9 @@ body, html {
 <!-- Navbar (sit on top) -->
 <div class="w3-top" >
   <ul class="my-navbar w3-center w3-top w3-xlarge bg_brown" >
-  <li class="w3-left w3-left-align" style="width:33.3% !important"><a href="#"><i class="fa fa-home"></i></a></li>
+  <li class="w3-left w3-left-align" style="width:33.3% !important"><a href="index.html"><i class="fa fa-home"></i></a></li>
   <li class="w3-left w3-center w3-xlarge" style="width:33.3% !important; margin-top:5px">September 2016</i></a></li>
-  <li class="w3-left w3-right-align" style="width:33.3% !important"><a href="calendar.html"><i class="fa fa-calendar"></i></a></li>
+  <li class="w3-left w3-right-align" style="width:33.3% !important"><a href="#"><i class="fa fa-calendar"></i></a></li>
 
 </ul>
 </div>
@@ -143,7 +143,7 @@ body, html {
                     <li class="day">
                         <div class="date">9</div>
                         <div class="event">
-                            <img style="width:100%" src="pancakes.jpg" alt="Pankcakes" />
+                            <a href="pancakes.html"><img style="width:100%" src="pancakes.jpg" alt="Pankcakes" /></a>
                         </div>
                     </li>
                 </ul>
@@ -186,7 +186,7 @@ body, html {
                     <li class="day">
                         <div class="date">19</div>
                         <div class="event">
-                            <img style="width:100%" src="meatballs.jpg" alt="Meaballs" />
+                            <a href="meatballs.html"><img style="width:100%" src="meatballs.jpg" alt="Meaballs" /></a>
                         </div>
                     </li>
                     <li class="day">
@@ -270,11 +270,11 @@ body, html {
     <!-- Responsive Grid. Four columns on tablets, laptops and desktops. Will stack on mobile devices/small screens (100% width) -->
     <div class="w3-row-padding w3-center">
       <div class="w3-col m3">
-        <img src="meatballs.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity">
+        <a href="meatballs.html"><img src="meatballs.jpg" style="width:100%" class="w3-hover-opacity"></a>
       </div>
 
       <div class="w3-col m3">
-        <img src="pancakes.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity">
+        <a href="pancakes.html"><img src="pancakes.jpg" style="width:100%" class="w3-hover-opacity"></a>
       </div>
 
 
