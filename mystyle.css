@@ -4,6 +4,15 @@
   color: white;
 }
 
+.suggestion-small-container{
+  border:2px solid white;
+  padding-left: 2%;
+  margin-left: 2%;
+  margin-right:2%;
+  background-color: #2B1801;
+  color: white;
+}
+
 .bg_brown{
   background-color: #2B1801;
   color: white;
