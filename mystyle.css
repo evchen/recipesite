@@ -102,6 +102,15 @@
     max-width: 100%;
     min-width: 66.7%;
   }
+  .suggestion-small-container{
+    border:2px solid white;
+    padding-left: 2%;
+    margin-left: 2%;
+    margin-right:2%;
+    background-color: #2B1801;
+    color: white;
+    margin-bottom:20px;
+  }
 }
 @media screen and (max-width:600px){
   h1{
