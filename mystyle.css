@@ -121,6 +121,10 @@ p.handw{
     font-family: 'Pacifico', cursive!important;
 }
 
+h4.handw{
+    font-family: 'Lobster Two', cursive!important;
+}
+
 a:hover{
   background-color: white;
   color: #2B1801;
