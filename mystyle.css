@@ -122,8 +122,10 @@
   }
 }
 
-.ingredient-list{
-
+@@media screen and (max-width:319px) {
+  .small{
+    font-size: 18px!important;
+  }
 }
 
 p.handw{
