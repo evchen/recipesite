@@ -31,9 +31,11 @@
       <p>
         Password:
       </p>
-      <input type="password" name="password" value="" placeholder="Password"><br>
-      <input class="w3-btn w3-theme bg_brown w3-margin-bottom" style="float:center"type="submit" value="LOG IN">
-      <input class="w3-btn w3-theme bg_brown w3-margin-bottom" style="float:center"type="submit" value="REGISTER">
+      <form action="login_check.php" method="post">
+        <input type="password" name="password" value="" placeholder="Password"><br>
+        <input class="w3-btn w3-theme bg_brown w3-margin-bottom" style="float:center"type="submit" value="LOG IN">
+        <input class="w3-btn w3-theme bg_brown w3-margin-bottom" style="float:center"type="submit" value="REGISTER">
+      </form>
     </div>
   </div>
 
