@@ -29,8 +29,8 @@
         <input type="password" name="password" value="" placeholder="Password"><br>
         <input class="w3-btn w3-theme bg_brown w3-margin-bottom" style="float:center"type="submit" value="LOG IN">
       </form>
-      <p class="w3-left">
-        Not registred? <a class="text_brown" href="register.php">Create and account</a>
+      <p >
+        Not registred? <a class="text_brown" href="register.php">Create an account</a>
       </p>
     </div>
 
@@ -41,7 +41,7 @@
           <input type="password" name="password" value="" placeholder="Password"><br>
           <input class="w3-btn w3-theme bg_brown w3-margin-bottom" style="float:center"type="submit" value="LOG IN">
         </form>
-        <p class="w3-left">
+        <p >
           Not registred? <a class="text_brown" href="register.php">Create and account</a>
         </p>
       </div>
