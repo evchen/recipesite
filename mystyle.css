@@ -230,6 +230,36 @@ a:hover{
   filter: grayscale(90%);
 }
 
+.login-container{
+  background-color: white;
+  font-style: 'Raleway', sans-serif!important;
+  padding-bottom: 20px;
+
+}
+.login-container h2{
+  margin-left: 15%;
+  margin-top: 10px;
+  margin-bottom: 10px;
+
+}
+.login-container p{
+  margin-left: 20%;
+  margin-top: 10px;
+}
+.login-container input{
+  margin-left: 20%;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  width:60%;
+}
+
+.login-column{
+  width:60%;
+  margin-left: 20%;
+  margin-top:20px;
+  margin-bottom: 20px;
+}
+
 /* Turn off parallax scrolling for tablets and mobiles */
 @media only screen and (max-width: 1024px) {
   .bgimg-1, .bgimg-2, .bgimg-3 {

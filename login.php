@@ -4,11 +4,11 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
-<link rel="stylesheet" href="mystyle.css">
 <link rel="stylesheet" href="recipe_style.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato%7CRaleway%7CIndie+Flower%7CLobster+Two%7CPacifico">
 <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
 <link rel="stylesheet" href="html5reset.css">
+<link rel="stylesheet" href="mystyle.css">
 <body>
 
   <!-- Navbar (sit on top) -->
@@ -22,10 +22,16 @@
 
   <!-- First Parallax Image with Log In Text -->
   <div class="bgimg-1 w3-opacity w3-display-container " >
-    <div class="w3-col m3 w3-display-middle" style="background-color:white">
+    <div class="login-container w3-col m3 w3-display-middle ">
       <h2 class="w3-xlarge w3-margin">Log in</h2>
-      <input class="w3-margin" type="text" name="name" value="" placeholder="User Name">
-      <input class="w3-margin" type="password" name="password" value="" placeholder="Password"><br>
+      <p>
+        Username:
+      </p>
+      <input type="text" name="name" value="" placeholder="User Name">
+      <p>
+        Password:
+      </p>
+      <input type="password" name="password" value="" placeholder="Password"><br>
       <input class="w3-btn w3-theme bg_brown w3-margin-bottom" style="float:center"type="submit" value="LOG IN">
     </div>
   </div>
