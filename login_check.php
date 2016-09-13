@@ -5,17 +5,17 @@ include 'db.php';
 function Login()
 {
   if(empty($_POST['name'])){
-    header("Location: login.php?wrong1");
+    header("Location: login.php?wrong");
   }
   if(empty($_POST['password'])){
-    header("Location: login.php?wrong2");
+    header("Location: login.php?wrong");
   }
 
   $name = $_POST['name'];
   $password = $_POST['password'];
 
   if(!CheckLoginInDB($name,$password)){
-    header("Location: login.php?wrong3");
+    header("Location: login.php?wrong");
 
   }else{
     $_SESSION["c_id"] = $name;
