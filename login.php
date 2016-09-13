@@ -24,14 +24,14 @@
   <div class="bgimg-1 w3-opacity w3-display-container " >
     <div class="login-container w3-col m3 w3-display-middle ">
       <h2 class="w3-xlarge w3-margin logo_font">Log in</h2>
-      <p>
-        Username:
-      </p>
-      <input type="text" name="name" value="" placeholder="User Name">
-      <p>
-        Password:
-      </p>
       <form action="login_check.php" method="post">
+        <p>
+          Username:
+        </p>
+        <input type="text" name="name" value="" placeholder="User Name">
+        <p>
+          Password:
+        </p>
         <input type="password" name="password" value="" placeholder="Password"><br>
         <input class="w3-btn w3-theme bg_brown w3-margin-bottom" style="float:center"type="submit" value="LOG IN">
         <input class="w3-btn w3-theme bg_brown w3-margin-bottom" style="float:center"type="submit" value="REGISTER">
