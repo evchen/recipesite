@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Sep 13, 2016 at 10:57 AM
+-- Generation Time: Sep 13, 2016 at 03:33 PM
 -- Server version: 10.1.10-MariaDB
 -- PHP Version: 7.0.4
 
@@ -28,8 +28,8 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `comment` (
   `c_id` int(11) NOT NULL,
-  `u_id` int(11) DEFAULT NULL,
-  `r_id` int(11) DEFAULT NULL,
+  `r_id` int(11) NOT NULL,
+  `u_name` varchar(15) NOT NULL,
   `content` text
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -37,9 +37,9 @@ CREATE TABLE `comment` (
 -- Dumping data for table `comment`
 --
 
-INSERT INTO `comment` (`c_id`, `u_id`, `r_id`, `content`) VALUES
-(1, 1, 1, 'This recipe is AWESOME! I am in love with it!! A true taste of Sweden in this dish, very recommended.\r\n'),
-(2, 2, 1, 'This dish goes great with pancakes as desert from this same website!');
+INSERT INTO `comment` (`c_id`, `r_id`, `u_name`, `content`) VALUES
+(1, 1, 'eve', 'This recipe is AWESOME! I am in love with it!! A true taste of Sweden in this dish, very recommended.'),
+(2, 1, 'mike', 'This dish goes great with pancakes as desert from this same website!');
 
 -- --------------------------------------------------------
 
@@ -67,8 +67,7 @@ INSERT INTO `recipe` (`r_id`, `link`) VALUES
 --
 
 CREATE TABLE `user` (
-  `u_id` int(11) NOT NULL,
-  `name` varchar(10) NOT NULL,
+  `u_name` varchar(10) NOT NULL,
   `password` varchar(20) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -76,9 +75,9 @@ CREATE TABLE `user` (
 -- Dumping data for table `user`
 --
 
-INSERT INTO `user` (`u_id`, `name`, `password`) VALUES
-(1, 'mike', 'mike'),
-(2, 'eve', 'eve');
+INSERT INTO `user` (`u_name`, `password`) VALUES
+('eve', 'eve'),
+('mike', 'mike');
 
 --
 -- Indexes for dumped tables
@@ -89,8 +88,8 @@ INSERT INTO `user` (`u_id`, `name`, `password`) VALUES
 --
 ALTER TABLE `comment`
   ADD PRIMARY KEY (`c_id`),
-  ADD KEY `u_id` (`u_id`),
-  ADD KEY `r_id` (`r_id`);
+  ADD KEY `r_id` (`r_id`),
+  ADD KEY `u_name` (`u_name`);
 
 --
 -- Indexes for table `recipe`
@@ -102,7 +101,7 @@ ALTER TABLE `recipe`
 -- Indexes for table `user`
 --
 ALTER TABLE `user`
-  ADD PRIMARY KEY (`u_id`);
+  ADD PRIMARY KEY (`u_name`);
 
 --
 -- AUTO_INCREMENT for dumped tables
@@ -119,11 +118,6 @@ ALTER TABLE `comment`
 ALTER TABLE `recipe`
   MODIFY `r_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 --
--- AUTO_INCREMENT for table `user`
---
-ALTER TABLE `user`
-  MODIFY `u_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
---
 -- Constraints for dumped tables
 --
 
@@ -131,8 +125,8 @@ ALTER TABLE `user`
 -- Constraints for table `comment`
 --
 ALTER TABLE `comment`
-  ADD CONSTRAINT `comment_ibfk_1` FOREIGN KEY (`u_id`) REFERENCES `user` (`u_id`),
-  ADD CONSTRAINT `comment_ibfk_2` FOREIGN KEY (`r_id`) REFERENCES `recipe` (`r_id`);
+  ADD CONSTRAINT `comment_ibfk_1` FOREIGN KEY (`r_id`) REFERENCES `recipe` (`r_id`),
+  ADD CONSTRAINT `comment_ibfk_2` FOREIGN KEY (`u_name`) REFERENCES `user` (`u_name`);
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

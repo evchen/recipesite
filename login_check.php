@@ -5,10 +5,10 @@ include 'db.php';
 function Login()
 {
   if(empty($_POST['name'])){
-    header("Location: index.php?wrong1");
+    header("Location: login.php?wrong1");
   }
   if(empty($_POST['password'])){
-    header("Location: index.php?wrong2");
+    header("Location: login.php?wrong2");
   }
 
   $name = $_POST['name'];

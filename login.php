@@ -24,6 +24,10 @@
   <div class="bgimg-1 w3-opacity w3-display-container" >
     <div class="login-container w3-col m3 w3-display-middle w3-hide-small w3-hide-medium">
       <h2 class="w3-xlarge w3-margin logo_font w3-center">Tasty Recipe</h2>
+
+      <?php if(isset($_GET['wrong1'])){echo '<p>Please enter your user name</p>';} ?>
+      <?php if(isset($_GET['wrong2'])){echo '<p>Please enter your password</p>';} ?>
+      <?php if(isset($_GET['wrong3'])){echo '<p>User name and password does not match</p>';} ?>
       <form action="login_check.php" method="post">
         <input type="text" name="name" value="" placeholder="User Name">
         <input type="password" name="password" value="" placeholder="Password"><br>
