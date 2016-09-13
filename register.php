@@ -23,15 +23,12 @@
   <!-- First Parallax Image with Log In Text -->
   <div class="bgimg-1 w3-opacity w3-display-container " >
     <div class="login-container w3-col m3 w3-display-middle ">
-      <h2 class="w3-xlarge w3-margin logo_font w3-center">Tasty Recipe</h2>
+      <h2 class="w3-xlarge w3-margin logo_font w3-center">Sign Up!</h2>
       <form action="login_check.php" method="post">
-        <input type="text" name="name" value="" placeholder="User Name">
-        <input type="password" name="password" value="" placeholder="Password"><br>
-        <input class="w3-btn w3-theme bg_brown w3-margin-bottom" style="float:center"type="submit" value="LOG IN">
+        <input type="text" name="name" value="" placeholder="Your new username">
+        <input type="text" name="password" value="" placeholder="Your new password"><br>
+        <input class="w3-btn w3-theme bg_brown w3-margin-bottom" style="float:center"type="submit" value="REGISTER">
       </form>
-      <p class="w3-left">
-        Not registred? <a class="text_brown" href="register.php">Create and account</a>
-      </p>
     </div>
   </div>
 

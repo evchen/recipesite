@@ -245,6 +245,7 @@ a:hover{
 .login-container p{
   margin-left: 20%;
   margin-top: 10px;
+  font-size: 12px;
 }
 .login-container input{
   margin-left: 20%;
