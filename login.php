@@ -21,8 +21,8 @@
   </div>
 
   <!-- First Parallax Image with Log In Text -->
-  <div class="bgimg-1 w3-opacity w3-display-container " >
-    <div class="login-container w3-col m3 w3-display-middle ">
+  <div class="bgimg-1 w3-opacity w3-display-container" >
+    <div class="login-container w3-col m3 w3-display-middle w3-hide-small w3-hide-medium">
       <h2 class="w3-xlarge w3-margin logo_font w3-center">Tasty Recipe</h2>
       <form action="login_check.php" method="post">
         <input type="text" name="name" value="" placeholder="User Name">
@@ -33,7 +33,20 @@
         Not registred? <a class="text_brown" href="register.php">Create and account</a>
       </p>
     </div>
-  </div>
+
+      <div class="login-container w3-col m6 w3-display-middle w3-hide-large">
+        <h2 class="w3-xlarge w3-margin logo_font w3-center">Tasty Recipe</h2>
+        <form action="login_check.php" method="post">
+          <input type="text" name="name" value="" placeholder="User Name">
+          <input type="password" name="password" value="" placeholder="Password"><br>
+          <input class="w3-btn w3-theme bg_brown w3-margin-bottom" style="float:center"type="submit" value="LOG IN">
+        </form>
+        <p class="w3-left">
+          Not registred? <a class="text_brown" href="register.php">Create and account</a>
+        </p>
+      </div>
+    </div>
+
 
   <div class="w3-col m12">
     <div class="w3-container w3-padding w3-center w3-white">
