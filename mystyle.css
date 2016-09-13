@@ -12,8 +12,9 @@ nutri_text{
   white-space:nowrap;
 }
 
-.menu_width{
+.menu_button{
   width:10%!important;
+  border-right: thin double white;
 }
 
 .menu_cal{

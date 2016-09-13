@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html lang="en">
 <title>Tasty Recipes</title>
@@ -14,8 +15,14 @@
   <!-- Navbar (sit on top) -->
   <div class="w3-top" >
     <ul class="my-navbar w3-center w3-top w3-xlarge bg_brown" >
-      <li class="menu_width w3-left w3-center"><a href="index.html"><i class="fa fa-home"></i></a></li>
-      <li class="menu_width w3-right w3-center"><a href="calendar.html"><i class="fa fa-calendar"></i></a></li>
+      <li class="w3-left w3-center menu_button"><a href="index.html"><i class="fa fa-home"></i></a></li>
+      <li class="w3-left w3-center menu_button"><a href="calendar.html">Calendar</a></li>
+      <li class="w3-right w3-center menu_button">
+        <?php if(!isset($_SESSION["user"]))
+          {$message='<a href="login.php">Log In</a>';}
+          else{$message=$_SESSION["user"];}
+          echo $message; ?>
+        </li>
 
     </ul>
   </div>

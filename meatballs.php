@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html lang="en">
 <title>Swedish Meatballs</title>
@@ -10,19 +11,25 @@
 <link rel="stylesheet" href="html5reset.css">
 <link rel="stylesheet" href="recipe_style.css">
 <body>
-
+  <?php $r_id=1;  ?>
   <!-- Navbar (sit on top) -->
   <div class="w3-top" >
     <ul class="my-navbar w3-center w3-top w3-xlarge bg_brown" >
-      <li class="w3-left w3-center menu_width"><a href="index.html"><i class="fa fa-home"></i></a></li>
-      <li class="w3-right w3-center menu_width"><a href="calendar.html"><i class="fa fa-calendar"></i></a></li>
+      <li class="w3-left w3-center menu_button"><a href="index.html"><i class="fa fa-home"></i></a></li>
+      <li class="w3-left w3-center menu_button"><a href="calendar.html">Calendar</a></li>
+      <li class="w3-right w3-center menu_button">
+        <?php if(!isset($_SESSION["user"]))
+          {$message='<a href="login.php">Log In</a>';}
+          else{$message=$_SESSION["user"];}
+          echo $message; ?>
+        </li>
+
     </ul>
   </div>
-
   <div class="recipe-container text_brown">
     <!-- small and medium image displayer-->
     <div class="w3-col m12 w3-hide-large bottom_margin">
-      <h2 class="text_brown w3-hide-large" style="text-align:center ">Swedish Meatballs</h2>
+      <h2 class="text_brown w3-hide-large" style="text-align:center ">Swedish Meatballs </h2>
       <img src="meatlballs.jpg" class="image_resize " alt="meatballs image">
   </div>
 

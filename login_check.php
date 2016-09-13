@@ -18,7 +18,8 @@ function Login()
     header("Location: login.php?wrong");
 
   }else{
-    $_SESSION["c_id"] = $name;
+    $_SESSION["user"] = $name;
+
     header("Location: index.php");
   }
 
