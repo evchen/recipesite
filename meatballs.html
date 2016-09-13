@@ -1,63 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
-<title>Swedish Meatballs</title>
+<title>Pancakes</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="html5reset.css">
 <link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
 <link rel="stylesheet" href="mystyle.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato%7CRaleway%7CIndie+Flower%7CLobster+Two%7CPacifico">
 <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
-<style>
-h1,h2{font-family: "Lobster Two", cursive!important;}
-body,h3,h4,h5,h6 {font-family: "Raleway", sans-serif!important;}
-body, html {
-    height: 100%;
-    color: #777;
-    line-height: 1.8;
-}
-
-.w3-wide {letter-spacing: 10px;}
-.w3-hover-opacity {cursor: pointer;}
-
-
-p.nutri_text{
-  margin-bottom:1%!important;
-  border-style:none none solid none!important;
-  border-width: 2px!important;
-}
-</style>
-
+<link rel="stylesheet" href="html5reset.css">
+<link rel="stylesheet" href="recipe_style.css">
 <body>
 
-<!-- Navbar (sit on top) -->
-<div class="w3-top" >
-  <ul class="my-navbar w3-center w3-top w3-xlarge bg_brown" >
-
-    <li class="w3-left w3-center" style="width:10% !important"><a href="index.html"><i class="fa fa-home"></i></a></li>
-    <li class="w3-right w3-center" style="width:10% !important"><a href="calendar.html"><i class="fa fa-calendar"></i></a></li>
-
-  </ul>
-</div>
-
-<div class="recipe-container text_brown" style="margin-top:80px">
-  <!-- small and medium image displayer-->
-  <div class="w3-col m12 w3-hide-large" style="margin-bottom:20px;">
-    <h2 class="text_brown w3-hide-large" style="text-align:center ">Meatballs</h2>
-    <img src="meatballs.jpg" class="image_resize " alt="meatballs image">
-
+  <!-- Navbar (sit on top) -->
+  <div class="w3-top" >
+    <ul class="my-navbar w3-center w3-top w3-xlarge bg_brown" >
+      <li class="w3-left w3-center menu_width"><a href="index.html"><i class="fa fa-home"></i></a></li>
+      <li class="w3-right w3-center menu_width"><a href="calendar.html"><i class="fa fa-calendar"></i></a></li>
+    </ul>
   </div>
-  <!-- large image displayer -->
-  <div class="w3-col m12 w3-hide-medium w3-hide-small recipe-head-container" >
-    <div class="image_container" style="background-image:url('meatballs.jpg');">
-      <h1 style="color:white; margin-top:8%">Swedish<br>Meatballs</h1>
+
+  <div class="recipe-container text_brown">
+    <!-- small and medium image displayer-->
+    <div class="w3-col m12 w3-hide-large bottom_margin">
+      <h2 class="text_brown w3-hide-large" style="text-align:center ">Meatballs</h2>
+      <img src="meatlballs.jpg" class="image_resize " alt="meatballs image">
+  </div>
+
+    <!-- large image displayer -->
+    <div class="w3-col m12 w3-hide-medium w3-hide-small recipe-head-container" >
+      <div class="image_con tainer" style="background-image:url('meatballs.jpg');">
+        <h1>Swedish Meatballs</h1>
+      </div>
     </div>
-
-  </div>
 
 
   <!-- ingredients -->
-  <div class="w3-col m8" style="padding-left:2%; ">
+  <div class="w3-col m8 list_padding">
     <h3>Ingredients</h3>
     <ul>
       <li>1/2 cup milk (whole, 2%, or skim</li>
@@ -78,45 +56,45 @@ p.nutri_text{
 
 
   <!-- Nutrition value -->
-  <div class="w3-col m4 nutri_container " style="margin-top:2%;padding-left:1%;padding-right:1%">
-    <h4 style="margin-bottom:0!important;"><b>Nutrition Facts</b></h4>
+  <div class="w3-col m4 nutri_container" style="margin-top:2%;padding-left:1%;padding-right:1%">
+    <h4 class="nutri_facts">Nutrition Facts</h4>
     <p class="nutri_text">
       <i>4 servings</i>
     </p>
     <table style="width:100%">
       <tr>
-        <td style="text-align:left">Calories</td>
-        <td style="text-align:right">399kCals</td>
+        <td class="left">Calories</td>
+        <td class="right">399kCals</td>
       </tr>
       <tr>
-        <td style="text-align:left">Carbohydrate</td>
-        <td style="text-align:right">20g</td>
+        <td class="left">Carbohydrate</td>
+        <td class="right">20g</td>
       </tr>
       <tr>
-        <td style="text-align:left">Fat</td>
-        <td style="text-align:right">23g</td>
+        <td class="left">Fat</td>
+        <td class="right">23g</td>
       </tr>
       <tr>
-        <td style="text-align:left">Protein</td>
-        <td style="text-align:right">27g</td>
+        <td class="left">Protein</td>
+        <td class="right">27g</td>
       </tr>
       <tr>
-        <td style="text-align:left">Cholesterol</td>
-        <td style="text-align:right">164mg</td>
+        <td class="left">Cholesterol</td>
+        <td class="right">164mg</td>
       </tr>
       <tr>
-        <td style="text-align:left">Sodium</td>
-        <td style="text-align:right">2,400mg</td>
+        <td class="left">Sodium</td>
+        <td class="right">2,400mg</td>
       </tr>
       <tr>
-        <td style="text-align:left">Fiber</td>
-        <td style="text-align:right">1g</td>
+        <td class="left">Fiber</td>
+        <td class="right">1g</td>
       </tr>
     </table>
 
   <!-- Instruction -->
   </div>
-  <div class="w3-col m12" style="padding-left:2%; margin-bottom:20px">
+  <div class="w3-col m12 list_padding bottom_margin">
     <h3>Instructions</h3>
     <ul>
       <li>Combine the milk and breadcrumbs: Pour the milk over the breadcrumbs in a small bowl and set aside while preparing the rest of the meatball mix. The breadcrumbs will absorb the milk and become soggy.
@@ -145,21 +123,21 @@ p.nutri_text{
   </div>
 
   <!-- Write Comment -->
-  <div class="w3-col m12" style="margin-top:20px; margin-bottom:20px">
+  <div class="w3-col m12 bottom_margin top_margin_small">
       <div class="w3-container w3-padding">
         <h6 class="w3-opacity">Comment</h6>
         <p contenteditable="true" class="w3-border w3-padding">Write your comment here..</p>
-        <button type="button" class="w3-btn w3-theme w3-right bg_brown" style="margin-top:10px"><i class="fa fa-pencil"></i> Post</button>
+        <button type="button" class="w3-btn w3-theme w3-right bg_brown top_margin_small"><i class="fa fa-pencil"></i> Post</button>
       </div>
       <hr>
   </div>
 
   <!-- Comments -->
-  <div class="w3-col m12" style=" margin-bottom:20px">
+  <div class="w3-col m12 bottom_margin">
     <h5>Recent Comments</h5>
     <div class="w3-row">
       <div class="w3-col m2 text-center">
-        <img class="w3-circle" src="a_avatar.png" style="width:96px;height:96px" alt="Avatar Image">
+        <img class="w3-circle avatar_pic" src="a_avatar.png" alt="Avatar Image">
       </div>
       <div class="w3-col m10 w3-container">
         <h4>Steve <span class="w3-opacity w3-medium">Sep 03, 2016, 9:12 PM</span></h4>
@@ -169,7 +147,7 @@ p.nutri_text{
     <hr>
     <div class="w3-row">
       <div class="w3-col m2 text-center">
-        <img class="w3-circle" src="a_avatar.png" style="width:96px;height:96px" alt="Avatar Image">
+        <img class="w3-circle avatar_pic" src="a_avatar.png" alt="Avatar Image">
       </div>
       <div class="w3-col m10 w3-container">
         <h4>David <span class="w3-opacity w3-medium">Sep 5, 2016, 11:15 AM</span></h4>
@@ -179,7 +157,7 @@ p.nutri_text{
   </div>
 
   <!-- Line -->
-  <div class="w3-col m12" style=" margin-bottom:30px" >
+  <div class="w3-col m12 bottom_margin">
     <hr>
   </div>
 
@@ -189,21 +167,21 @@ p.nutri_text{
 
 <!-- Suggestion (Recipe Section) -->
 <div class="big-container">
-  <div class="w3-content w3-container w3-padding-64 ">
-    <h2 class="w3-center" style="text-align:left!important;">Popular recipes</h2>
+  <div class="w3-content w3-container">
+    <h2 class="w3-center w3-xlarge pop_recipe">Popular recipes</h2>
 
     <!-- Responsive Grid. Four columns on tablets, laptops and desktops. Will stack on mobile devices/small screens (100% width) -->
     <div class="w3-row-padding ">
       <div class="w3-col m3 w3-hover-opacity suggestion-small-container">
         <a href="meatballs.html">
-          <img src="meatballs.jpg" style="width:100%; margin-top:10px" alt="Meatballs Recipe">
+          <img src="meatballs.jpg" class="pop_img" alt="Meatballs Recipe">
         </a>
         <h4 class="handw">Swedish meatballs</h4>
       </div>
 
       <div class="w3-col m3 w3-hover-opacity suggestion-small-container">
         <a href="pancakes.html">
-          <img src="pancakes.jpg" style="width:100%; margin-top:10px" alt="Pancakes Recipe">
+          <img src="pancakes.jpg" class="pop_img" alt="Pancakes Recipe">
         </a>
         <h4 class="handw">Pancakes</h4>
       </div>

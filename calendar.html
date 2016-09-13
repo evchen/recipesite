@@ -3,28 +3,20 @@
 <title>Recipe Calendar</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="html5reset.css">
 <link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
 <link rel="stylesheet" href="mystyle.css">
-<link rel="stylesheet" href="cal.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato%7CRaleway%7CIndie+Flower%7CLobster+Two%7CPacifico">
-<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css"><style>
-body,h1,h2,h3,h4,h5,h6{font-family: 'Lobster Two', cursive!important}
-body, html {
-    height: 100%;
-    color: #777;
-    line-height: 1.8;
-}
-
-</style>
+<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+<link rel="stylesheet" href="html5reset.css">
+<link rel="stylesheet" href="cal.css">
 <body >
 
 <!-- Navbar (sit on top) -->
 <div class="w3-top" >
   <ul class="my-navbar w3-center w3-top w3-xlarge bg_brown" >
-    <li class="w3-left w3-center" style="width:10% !important"><a href="index.html"><i class="fa fa-home"></i></a></li>
-    <li class="w3-left w3-center w3-xlarge" style="width:80% !important; ">September 2016</li>
-    <li class="w3-left w3-center" style="width:10% !important"><a href="calendar.html"><i class="fa fa-calendar"></i></a></li>
+    <li class="w3-left w3-center menu_width"><a href="index.html"><i class="fa fa-home"></i></a></li>
+    <li class="w3-left w3-center w3-xlarge menu_cal"><h2>September 2016</h2></li>
+    <li class="w3-left w3-center menu_width"><a href="calendar.html"><i class="fa fa-calendar"></i></a></li>
 
   </ul>
 </div>
@@ -100,7 +92,7 @@ body, html {
                         <div class="date">9</div>
                         <div class="event">
                           <a href="pancakes.html">
-                            <img style="max-width:100%;max-height:100%" src="pancakes.jpg" alt="Pancake recipe" />
+                            <img class="cal_img" src="pancakes.jpg" alt="Pancake recipe" />
                           </a>
                         </div>
                     </li>
@@ -145,7 +137,7 @@ body, html {
                         <div class="date">19</div>
                         <div class="event" >
                           <a href="meatballs.html">
-                            <img style="max-width:100%;max-height:100%" src="meatballs.jpg" alt="meatballs recipe" />
+                            <img class="cal_img" src="meatballs.jpg" alt="meatballs recipe" />
                           </a>
                         </div>
                     </li>
@@ -225,20 +217,20 @@ body, html {
         <!-- Suggestion (Recipe Section) -->
         <div class="big-container">
           <div class="w3-content w3-container w3-padding-64 ">
-            <h2 class="w3-center" style="text-align:left!important;">Popular recipes</h2>
+            <h2 class="w3-center w3-xlarge pop_recipe">Popular recipes</h2>
 
             <!-- Responsive Grid. Four columns on tablets, laptops and desktops. Will stack on mobile devices/small screens (100% width) -->
             <div class="w3-row-padding ">
               <div class="w3-col m3 w3-hover-opacity suggestion-small-container">
                 <a href="meatballs.html">
-                  <img src="meatballs.jpg" style="width:100%; margin-top:10px" alt="Meatballs recipe">
+                  <img src="meatballs.jpg" class="pop_img" alt="Meatballs recipe">
                 </a>
                 <h4>Swedish meatballs</h4>
               </div>
 
               <div class="w3-col m3 w3-hover-opacity suggestion-small-container">
                 <a href="pancakes.html">
-                  <img src="pancakes.jpg" style="width:100%; margin-top:10px" alt="Pancake recipe">
+                  <img src="pancakes.jpg" class="pop_img" alt="Pancake recipe">
                 </a>
                 <h4>Pancakes</h4>
               </div>
