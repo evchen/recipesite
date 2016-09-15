@@ -1,3 +1,14 @@
+<?php
+
+include 'comment.php';
+session_start();
+
+// Set session variables
+$r_id=2;
+$_SESSION["r_id"] = $r_id;
+
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <title>Pancakes</title>
@@ -14,8 +25,15 @@
 <!-- Navbar (sit on top) -->
 <div class="w3-top" >
   <ul class="my-navbar w3-center w3-top w3-xlarge bg_brown" >
-    <li class="w3-left w3-center menu_width"><a href="index.html"><i class="fa fa-home"></i></a></li>
-    <li class="w3-right w3-center menu_width"><a href="calendar.html"><i class="fa fa-calendar"></i></a></li>
+    <li class="w3-left w3-center menu_button"><a href="index.php">Home</a></li>
+    <li class="w3-left w3-center menu_button"><a href="calendar.php">Calendar</a></li>
+    <li class="w3-right w3-center menu_button">
+      <?php if(!isset($_SESSION['user']))
+        {$message='<a href="login.php">Log In</a>';}
+        else{$message=$_SESSION['user'];}
+        echo $message; ?>
+      </li>
+
   </ul>
 </div>
 
@@ -116,31 +134,30 @@
 
   <!-- Comments -->
   <div class="w3-col m12 bottom_margin">
-    <h5>Recent Comments</h5>
-    <div class="w3-row">
-      <div class="w3-col m2 text-center">
-        <img class="w3-circle avatar_pic" src="a_avatar.png" alt="Avatar Image">
-      </div>
-      <div class="w3-col m10 w3-container">
-        <h4>Alice <span class="w3-opacity w3-medium">Sep 1, 2016, 9:12 PM</span></h4>
-        <p>This is very easy to follow and they taste really good! I personally love to eat them with strawberry jam :) .</p><br>
-      </div>
-    </div>
-    <hr>
-    <div class="w3-row">
-      <div class="w3-col m2 text-center">
-        <img class="w3-circle avatar_pic" src="a_avatar.png" alt="Avatar Image">
-      </div>
-      <div class="w3-col m10 w3-container">
-        <h4>Frank_the_troll <span class="w3-opacity w3-medium">Sep 3, 2016, 23:32 PM</span></h4>
-        <p>Did you hear about the angry pancake? He just flipped.</p><br>
-      </div>
-    </div>
-  </div>
+    <h5><b>Recent Comments</b></h5>
+    <br>
+    <?php
+    $var_i = 0;
 
-  <!-- Line -->
-  <div class="w3-col m12 bottom_margin">
-    <hr>
+    while($var_i<2){
+      $c = get_comments($var_i, $r_id);
+      $u = get_user($var_i, $r_id);
+      echo
+
+    "<div class='w3-row'>
+      <div class='w3-col m2 text-center'>
+        <img class='w3-circle avatar_pic' src='a_avatar.png' alt='Avatar Image'>
+      </div>
+      <div class='w3-col m10 w3-container'>
+        <h4>" .$u.  "<span class='w3-opacity w3-medium'> Sep 03, 2016, 9:12 PM </span></h4>
+        <p> " .$c. "</p><br>
+      </div>
+    </div>
+    <hr>";
+    ++$var_i;
+    }
+      ?>
+
   </div>
 
 </div>
@@ -155,14 +172,14 @@
     <!-- Responsive Grid. Four columns on tablets, laptops and desktops. Will stack on mobile devices/small screens (100% width) -->
     <div class="w3-row-padding ">
       <div class="w3-col m3 w3-hover-opacity suggestion-small-container bottom_margin">
-        <a href="meatballs.html">
+        <a href="meatballs.php">
           <img src="meatballs.jpg" class="pop_img" alt="Meatballs Recipe">
         </a>
         <h4 class="handw">Swedish meatballs</h4>
       </div>
 
       <div class="w3-col m3 w3-hover-opacity suggestion-small-container bottom_margin">
-        <a href="pancakes.html">
+        <a href="pancakes.php">
           <img src="pancakes.jpg" class="pop_img" alt="Pancakes Recipe">
         </a>
         <h4 class="handw">Pancakes</h4>

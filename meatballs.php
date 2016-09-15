@@ -1,4 +1,18 @@
-<?php session_start(); ?>
+<?php
+
+include 'comment.php';
+session_start();
+
+$r_id=1;
+$_SESSION["r_id"] = $r_id;
+$logedin_user=$_SESSION['user'];
+
+if (isset($_GET['delete'])) {
+  $c_id=$_GET['delete'];
+  delete_comment($c_id);
+  }
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <title>Swedish Meatballs</title>
@@ -15,12 +29,12 @@
   <!-- Navbar (sit on top) -->
   <div class="w3-top" >
     <ul class="my-navbar w3-center w3-top w3-xlarge bg_brown" >
-      <li class="w3-left w3-center menu_button"><a href="index.html"><i class="fa fa-home"></i></a></li>
-      <li class="w3-left w3-center menu_button"><a href="calendar.html">Calendar</a></li>
+      <li class="w3-left w3-center menu_button"><a href="index.php">Home</a></li>
+      <li class="w3-left w3-center menu_button"><a href="calendar.php">Calendar</a></li>
       <li class="w3-right w3-center menu_button">
-        <?php if(!isset($_SESSION["user"]))
+        <?php if(!isset($_SESSION['user']))
           {$message='<a href="login.php">Log In</a>';}
-          else{$message=$_SESSION["user"];}
+          else{$message=$_SESSION['user'];}
           echo $message; ?>
         </li>
 
@@ -133,44 +147,71 @@
   <div class="w3-col m12 bottom_margin top_margin_small">
       <div class="w3-container w3-padding">
         <h6 class="w3-opacity">Comment</h6>
-        <p contenteditable="true" class="w3-border w3-padding">Write your comment here..</p>
-        <button type="button" class="w3-btn w3-theme w3-right bg_brown top_margin_small"><i class="fa fa-pencil"></i> Post</button>
+
+        <?php if(!isset($_SESSION['user']))
+          {
+
+
+
+            echo
+            "<form action='login.php' method='post'>
+              <input type='text' class='w3-border w3-padding full_width' name='content' placeholder='Write your comment here...''><br>
+              <button class='w3-btn w3-theme w3-right bg_brown top_margin_small' type='submit'><i class='fa fa-pencil'></i> Post</button>
+            </form>"
+            ;}
+          else{
+
+          echo
+
+          "<form action='post.php' method='post'>
+            <input type='hidden' name='r_id' value=".$r_id.">
+            <input type='hidden' name='user' value=".$_SESSION['user'].">
+            <input type='text' class='w3-border w3-padding full_width' name='content' placeholder='Write your comment here...''><br>
+            <button class='w3-btn w3-theme w3-right bg_brown top_margin_small' type='submit'><i class='fa fa-pencil'></i> Post</button>
+          </form>"
+
+          ;} ?>
+
+
       </div>
       <hr>
   </div>
 
   <!-- Comments -->
   <div class="w3-col m12 bottom_margin">
-    <h5>Recent Comments</h5>
-    <div class="w3-row">
-      <div class="w3-col m2 text-center">
-        <img class="w3-circle avatar_pic" src="a_avatar.png" alt="Avatar Image">
+    <h5><b>Recent Comments</b></h5>
+    <br>
+    <?php
+    $var_i = 0;
+
+    while(!empty(get_comments($var_i, $r_id))){
+      $c = get_comments($var_i, $r_id);
+      $u = get_user($var_i, $r_id);
+      $c_id = get_c_id($var_i, $r_id);
+      if($logedin_user==$u){
+        $extra = "Delete";
+      }else{
+        $extra = "";
+      }
+      echo
+
+    "<div class='w3-row'>
+      <div class='w3-col m2 text-center'>
+        <img class='w3-circle avatar_pic' src='a_avatar.png' alt='Avatar Image'>
       </div>
-      <div class="w3-col m10 w3-container">
-        <h4>Steve <span class="w3-opacity w3-medium">Sep 03, 2016, 9:12 PM</span></h4>
-        <p>This recipe is AWESOME! I am in love with it!! A true taste of Sweden in this dish, very recommended.</p><br>
+      <div class='w3-col m10 w3-container'>
+        <h4>" .$u.  "<span class='w3-opacity w3-medium'> Sep 03, 2016, 9:12 PM </span><span class='w3-opacity w3-right'><a href='meatballs.php?delete=".$c_id."'>".$extra."</a></span></h4>
+        <p> " .$c. "</p><br>
       </div>
     </div>
-    <hr>
-    <div class="w3-row">
-      <div class="w3-col m2 text-center">
-        <img class="w3-circle avatar_pic" src="a_avatar.png" alt="Avatar Image">
-      </div>
-      <div class="w3-col m10 w3-container">
-        <h4>David <span class="w3-opacity w3-medium">Sep 5, 2016, 11:15 AM</span></h4>
-        <p>This dish goes great with pancakes as desert from this same website!</p><br>
-      </div>
-    </div>
-  </div>
+    <hr>";
 
-  <!-- Line -->
-  <div class="w3-col m12 bottom_margin">
-    <hr>
-  </div>
+    ++$var_i;
+    }
+      ?>
 
+  </div>
 </div>
-
-
 
 <!-- Suggestion (Recipe Section) -->
 <div class="big-container">
@@ -180,14 +221,14 @@
     <!-- Responsive Grid. Four columns on tablets, laptops and desktops. Will stack on mobile devices/small screens (100% width) -->
     <div class="w3-row-padding ">
       <div class="w3-col m3 w3-hover-opacity suggestion-small-container bottom_margin">
-        <a href="meatballs.html">
+        <a href="meatballs.php">
           <img src="meatballs.jpg" class="pop_img" alt="Meatballs Recipe">
         </a>
         <h4 class="handw">Swedish meatballs</h4>
       </div>
 
       <div class="w3-col m3 w3-hover-opacity suggestion-small-container bottom_margin">
-        <a href="pancakes.html">
+        <a href="pancakes.php">
           <img src="pancakes.jpg" class="pop_img" alt="Pancakes Recipe">
         </a>
         <h4 class="handw">Pancakes</h4>

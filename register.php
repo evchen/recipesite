@@ -14,8 +14,14 @@
   <!-- Navbar (sit on top) -->
   <div class="w3-top" >
     <ul class="my-navbar w3-center w3-top w3-xlarge bg_brown" >
-      <li class="menu_width w3-left w3-center"><a href="index.html"><i class="fa fa-home"></i></a></li>
-      <li class="menu_width w3-right w3-center"><a href="calendar.html"><i class="fa fa-calendar"></i></a></li>
+      <li class="w3-left w3-center menu_button"><a href="index.php">Home</a></li>
+      <li class="w3-left w3-center menu_button"><a href="calendar.php">Calendar</a></li>
+      <li class="w3-right w3-center menu_button">
+        <?php if(!isset($_SESSION['user']))
+          {$message='<a href="login.php">Log In</a>';}
+          else{$message=$_SESSION['user'];}
+          echo $message; ?>
+        </li>
 
     </ul>
   </div>
@@ -47,7 +53,7 @@
     <div class="w3-container w3-padding w3-center w3-white">
     <p class="text_brown">
       The tastiest recipe site on the internet! <br>
-      Our calender of recipes include the best dishes of the month and you can get to it clicking here: <a href="calendar.html">"Go to Calendar"</a> <br>
+      Our calender of recipes include the best dishes of the month and you can get to it clicking here: <a href="calendar.php">"Go to Calendar"</a> <br>
       or from the calendar icon on the top-right corner of the menu.
     </p>
 
@@ -65,14 +71,14 @@
       <!-- Responsive Grid. Four columns on tablets, laptops and desktops. Will stack on mobile devices/small screens (100% width) -->
       <div class="w3-row-padding ">
         <div class="w3-col m3 w3-hover-opacity suggestion-small-container bottom_margin">
-          <a href="meatballs.html">
+          <a href="meatballs.php">
             <img class="pop_img" src="meatballs.jpg"alt="Meatballs Recipe" >
           </a>
           <h4 class="handw">Swedish meatballs</h4>
         </div>
 
         <div class="w3-col m3 w3-hover-opacity suggestion-small-container bottom_margin">
-          <a href="pancakes.html">
+          <a href="pancakes.php">
             <img class="pop_img" src="pancakes.jpg" alt="Pancakes Recipe">
           </a>
           <h4 class="handw">Pancakes</h4>

@@ -13,13 +13,18 @@ function Login()
 
   $name = $_POST['name'];
   $password = $_POST['password'];
+  $r_id = $_POST['r_id'];
 
   if(!CheckLoginInDB($name,$password)){
     header("Location: login.php?wrong");
 
+  if(!$r_id==null)
+    session_start();
+    $_SESSION['user'] = $name;
+    header("Location: index.php");
   }else{
-    $_SESSION["user"] = $name;
-
+    session_start();
+    $_SESSION['user'] = $name;
     header("Location: index.php");
   }
 

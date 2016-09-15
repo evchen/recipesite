@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html>
 <title>Recipe Calendar</title>
@@ -14,10 +15,14 @@
 <!-- Navbar (sit on top) -->
 <div class="w3-top" >
   <ul class="my-navbar w3-center w3-top w3-xlarge bg_brown" >
-    <li class="w3-left w3-center menu_width"><a href="index.html"><i class="fa fa-home"></i></a></li>
+    <li class="w3-left w3-center menu_button"><a href="index.php">Home</a></li>
     <li class="w3-left w3-center w3-xlarge menu_cal"><h2>September 2016</h2></li>
-    <li class="w3-left w3-center menu_width"><a href="calendar.html"><i class="fa fa-calendar"></i></a></li>
-
+    <li class="w3-right w3-center menu_button">
+      <?php if(!isset($_SESSION["user"]))
+        {$message='<a href="login.php">Log In</a>';}
+        else{$message=$_SESSION["user"];}
+        echo $message; ?>
+      </li>
   </ul>
 </div>
 
@@ -91,7 +96,7 @@
                     <li class="day">
                         <div class="date">9</div>
                         <div class="event">
-                          <a href="pancakes.html">
+                          <a href="pancakes.php">
                             <img class="cal_img" src="pancakes.jpg" alt="Pancake recipe" />
                           </a>
                         </div>
@@ -136,7 +141,7 @@
                     <li class="day">
                         <div class="date">19</div>
                         <div class="event" >
-                          <a href="meatballs.html">
+                          <a href="meatballs.php">
                             <img class="cal_img" src="meatballs.jpg" alt="meatballs recipe" />
                           </a>
                         </div>
@@ -222,14 +227,14 @@
             <!-- Responsive Grid. Four columns on tablets, laptops and desktops. Will stack on mobile devices/small screens (100% width) -->
             <div class="w3-row-padding ">
               <div class="w3-col m3 w3-hover-opacity suggestion-small-container">
-                <a href="meatballs.html">
+                <a href="meatballs.php">
                   <img src="meatballs.jpg" class="pop_img" alt="Meatballs recipe">
                 </a>
                 <h4>Swedish meatballs</h4>
               </div>
 
               <div class="w3-col m3 w3-hover-opacity suggestion-small-container">
-                <a href="pancakes.html">
+                <a href="pancakes.php">
                   <img src="pancakes.jpg" class="pop_img" alt="Pancake recipe">
                 </a>
                 <h4>Pancakes</h4>

@@ -14,7 +14,6 @@ nutri_text{
 
 .menu_button{
   width:10%!important;
-  border-right: thin double white;
 }
 
 .menu_cal{
@@ -267,3 +266,8 @@ a:hover{
   .bgimg-1, .bgimg-2, .bgimg-3 {
     background-attachment: scroll;
   }
+}
+
+.full_width{
+  width: 100%;
+}
